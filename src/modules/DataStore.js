@@ -39,17 +39,17 @@ export default class DataStore {
 
     if (taskOneIndex > taskTwoIndex) {
       while (i <= taskOneIndex) {
-        let temp = this.tasks[i];
+        const temp = this.tasks[i];
         this.tasks[i] = prevTask;
         prevTask = temp;
-        i++;
+        i += 1;
       }
     } else {
       while (i >= taskOneIndex) {
-        let temp = this.tasks[i];
+        const temp = this.tasks[i];
         this.tasks[i] = prevTask;
         prevTask = temp;
-        i--;
+        i -= 1;
       }
     }
 
