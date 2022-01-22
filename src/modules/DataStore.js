@@ -35,7 +35,6 @@ export default class DataStore {
 
   static swapTasks(taskOneIndex, taskTwoIndex) {
     let prevTask = this.tasks[taskOneIndex];
-
     let i = taskTwoIndex;
 
     if (taskOneIndex > taskTwoIndex) {
