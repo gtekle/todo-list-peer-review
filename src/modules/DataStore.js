@@ -34,9 +34,25 @@ export default class DataStore {
   }
 
   static swapTasks(taskOneIndex, taskTwoIndex) {
-    const temp = this.tasks[taskTwoIndex];
-    this.tasks[taskTwoIndex] = this.tasks[taskOneIndex];
-    this.tasks[taskOneIndex] = temp;
+    let prevTask = this.tasks[taskOneIndex];
+
+    let i = taskTwoIndex;
+
+    if (taskOneIndex > taskTwoIndex) {
+      while (i <= taskOneIndex) {
+        let temp = this.tasks[i];
+        this.tasks[i] = prevTask;
+        prevTask = temp;
+        i++;
+      }
+    } else {
+      while (i >= taskOneIndex) {
+        let temp = this.tasks[i];
+        this.tasks[i] = prevTask;
+        prevTask = temp;
+        i--;
+      }
+    }
 
     DataStore.updateTaskIndex();
   }
