@@ -21,6 +21,7 @@ The CRUD (create, update, delete) methods for the todo tasks are implemented. Al
 - [Live Demo Link](https://gtekle.github.io/todo-list-peer-review/)
 
 ## Getting Started
+
 - Install Node.js ^12.13
 - clone the repository by running\
     `git clone https://github.com/gtekle/todo-list-peer-review.git`
